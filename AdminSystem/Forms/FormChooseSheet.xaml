@@ -1,0 +1,40 @@
+﻿<Window x:Class="AdminSystem.Forms.FormChooseSheet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminSystem.Forms"
+        mc:Ignorable="d"
+        Title="Выберите ведомость" Height="194.167" Width="260.333" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="BtnGeneral" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="222" Height="35" FontSize="18" Click="BtnGeneral_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/User Group_32px.png" Height="29"/>
+                <TextBlock Text=" Общая" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="BtnClose" HorizontalAlignment="Left" Margin="58,104,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnClose_Click" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Cancel_32px.png" Height="29"/>
+                <TextBlock Text=" Закрыть" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="BtnIndividual" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="222" Height="35" FontSize="18" Click="BtnIndividual_Click" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/User_32px.png" Height="29"/>
+                <TextBlock Text=" Индивидуальная" Height="26"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+
+</Window>

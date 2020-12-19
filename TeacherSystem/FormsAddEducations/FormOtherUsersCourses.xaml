@@ -1,0 +1,54 @@
+﻿<Window x:Class="UserSystem.FormsAddEducations.FormOtherUsersCourses"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserSystem.FormsAddEducations"
+        mc:Ignorable="d"
+        Title="Курсы других пользователей" Height="450" Width="856.702" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid>
+        <DataGrid x:Name="DataGridOtherUsersCategory" IsReadOnly="True" HorizontalAlignment="Left" Height="297" Margin="10,110,0,0" VerticalAlignment="Top" Width="819" FontSize="16" MouseDoubleClick="DataGridOtherUsersCategory_MouseDoubleClick"/>
+        <Button HorizontalAlignment="Right" Margin="0,0,12,322" VerticalAlignment="Bottom" Width="132" Height="35" FontSize="18" Click="Button_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Cancel_32px.png" Height="29"/>
+                <TextBlock Text=" Закрыть" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ComboBox x:Name="CbxOtherUsersCategory" HorizontalAlignment="Right" Margin="0,65,357,0" VerticalAlignment="Top" Width="288" FontSize="18">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+            <ComboBoxItem IsSelected="True" Content="Все категории" />
+            <ComboBoxItem Content="Индивидуальная образовательная траектория"/>
+            <ComboBoxItem Content="Курсы, семинары, вебинары"/>
+            <ComboBoxItem Content="Публикации, выступления"/>
+            <ComboBoxItem Content="Освоение и применение новых технологий"/>
+            <ComboBoxItem Content="Участие в конкурсах"/>
+            <ComboBoxItem Content="Обобщение и распространение педаг. опыта"/>
+            <ComboBoxItem Content="Размещение материалов на сайте"/>
+            <ComboBoxItem Content="Другое"/>
+        </ComboBox>
+        <ComboBox x:Name="CbxOtherUsersCourses" HorizontalAlignment="Right" Margin="0,17,357,0" VerticalAlignment="Top" Width="288" FontSize="18">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label Content="Пользователь" HorizontalAlignment="Left" Margin="65,17,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Категория" HorizontalAlignment="Left" Margin="65,64,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Button Name="BtnShowOtherUsersCourses" HorizontalAlignment="Right" Margin="0,0,204,320" VerticalAlignment="Bottom" Width="132" Height="78" FontSize="18" Click="BtnShowOtherUsersCourses_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Filter_32px.png" Height="29"/>
+                <TextBlock Text=" Показать" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Image Source="../Source/Users_32px.png" HorizontalAlignment="Left" Height="35" Margin="18,16,0,0" VerticalAlignment="Top" Width="36"/>
+        <Image Source="../Source/Category_32px.png" HorizontalAlignment="Left" Height="35" Margin="18,64,0,0" VerticalAlignment="Top" Width="36"/>
+
+    </Grid>
+</Window>

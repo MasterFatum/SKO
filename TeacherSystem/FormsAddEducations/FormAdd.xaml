@@ -1,0 +1,77 @@
+﻿<Window x:Class="UserSystem.FormsAddEducations.FormAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Добавление новой записи в ваше портфолио" Height="500" Width="615" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="27,91,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox Name="TxbxTitle" HorizontalAlignment="Left" Height="31" Margin="124,94,0,0" Text="" VerticalAlignment="Top" Width="457" FontSize="18">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Описание" HorizontalAlignment="Left" Margin="27,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.216,0.009" FontSize="18"/>
+        <TextBox Name="TxbxDescription" HorizontalAlignment="Left" Height="183" Margin="124,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="457" FontSize="16">
+
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button Name="BtnAdd" Margin="444,425,15,0" VerticalAlignment="Top" Width="132" Height="35" RenderTransformOrigin="0.9,0.199" FontSize="18" Click="BtnAdd_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Save_32px.png" Height="29"/>
+                <TextBlock Text=" Сохранить" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Name="BtnClose" HorizontalAlignment="Left" Margin="10,425,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="Button_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Cancel_32px.png" Height="29"/>
+                <TextBlock Text=" Закрыть" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Категория" HorizontalAlignment="Left" Margin="305,18,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="TxbxSelectedCategory" IsEnabled="False" HorizontalAlignment="Left" IsReadOnly="False" Height="31" Margin="164,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="380" FontSize="18" TextAlignment="Center">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button Name="BtnClear" HorizontalAlignment="Left" Margin="236,425,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnClear_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Clear_32px.png"  Height="29"/>
+                <TextBlock Text=" Очистить" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Web cсылка" HorizontalAlignment="Left" Margin="9,372,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.216,0.009" FontSize="18"/>
+        <TextBox x:Name="TxbxHyperlink" HorizontalAlignment="Left" Height="31" Margin="124,375,0,0" Text="" VerticalAlignment="Top" Width="457" FontSize="18">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="TxbxFilePath" IsEnabled="False" HorizontalAlignment="Left" Height="31" Margin="124,327,0,0" Text="" VerticalAlignment="Top" Width="457" FontSize="18">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="BtnBrowseFile" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="100" Height="35" FontSize="18" Click="BtnBrowseFile_Click" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Opened Folder_32px.png"  Height="29"/>
+                <TextBlock Text=" Обзор" Height="26"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

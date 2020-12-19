@@ -1,0 +1,49 @@
+﻿<Window x:Name="AuthorizeForm" x:Class="TeacherSystem.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeacherSystem"
+        mc:Ignorable="d"
+        Title="Авторизация пользователя" Height="398.366" Width="406.589" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow" Closing="AuthorizeForm_Closing">
+  <Grid>
+    <TextBox Name="TxbxLogin" HorizontalAlignment="Left" Height="36" Margin="89,143,0,0" TextWrapping="Wrap" Text="i.panfilov@fckrasnodar.ru" VerticalAlignment="Top" Width="286" FontSize="18" FontWeight="Bold" TextAlignment="Left" TabIndex="1"/>
+    <Label Content="E-mail" HorizontalAlignment="Left" Margin="12,145,0,0" VerticalAlignment="Top" FontSize="18"/>
+    <Label Content="Пароль" HorizontalAlignment="Left" Margin="12,188,0,0" VerticalAlignment="Top" FontSize="18"/>
+    <Button Name="BtnAuthorize" HorizontalAlignment="Left" Margin="243,292,0,0" VerticalAlignment="Top" Width="132" Height="57" FontSize="18" Click="BtnAuthorize_Click" TabIndex="5">
+        <StackPanel Orientation="Horizontal">
+            <Image  Height="29"/>
+                <TextBlock Text="Войти" Height="26"/>
+        </StackPanel>
+            <Button.Effect>
+        <DropShadowEffect/>
+      </Button.Effect>
+        </Button>
+    <GroupBox Header="Войти как..." HorizontalAlignment="Left" Height="92" Margin="89,32,0,0" VerticalAlignment="Top" Width="286" FontSize="18">
+            <ComboBox Name="CbxAuthorizeAs" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" Width="208">
+            <ComboBox.Effect>
+          <DropShadowEffect/>
+        </ComboBox.Effect>
+        <ComboBoxItem IsSelected="True">Учитель</ComboBoxItem>
+        <ComboBoxItem Content="Администратор"/>
+      </ComboBox>
+    </GroupBox>
+    <Button x:Name="BtnAuthorizeExit" HorizontalAlignment="Left" Margin="12,292,0,0" VerticalAlignment="Top" Width="132" Height="57" FontSize="18" Click="BtnAuthorizeExit_Click" TabIndex="4">
+        <StackPanel Orientation="Horizontal">
+            <Image  Height="29"/>
+            <TextBlock Text="Закрыть" Height="26"/>
+        </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+    <CheckBox x:Name="ChkBoxSaveUser" Content="Запомнить пользователя" Margin="95,243,95,0" VerticalAlignment="Top" FontSize="16" Checked="ChkBoxSaveUser_Checked" TabIndex="3"/>
+    <PasswordBox x:Name="TxbxPassword" HorizontalAlignment="Left" Margin="89,188,0,0" VerticalAlignment="Top" Width="286" Height="34" FontSize="18" TabIndex="2" Password="doberman777"/>
+    <Menu HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" Width="48">
+      <MenuItem Header="Меню">
+        <MenuItem Header="Регистрация нового пользователя" Click="MenuItem_Click"/>
+      </MenuItem>
+    </Menu>
+
+  </Grid>
+</Window>

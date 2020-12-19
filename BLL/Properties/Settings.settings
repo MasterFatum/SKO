@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BLL.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FtpServerPortInside" Type="System.String" Scope="User">
+      <Value Profile="(Default)">21</Value>
+    </Setting>
+    <Setting Name="FtpServerPortOutside" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2121</Value>
+    </Setting>
+    <Setting Name="FtpUseSsl" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FtpServerAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">93.189.41.9</Value>
+    </Setting>
+    <Setting Name="FtpServerUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">u128077</Value>
+    </Setting>
+    <Setting Name="FtpServerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">z55x69GjIG8G</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

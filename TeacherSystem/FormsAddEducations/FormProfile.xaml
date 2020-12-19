@@ -1,0 +1,66 @@
+﻿<Window x:Class="UserSystem.FormsAddEducations.FormProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserSystem.FormsAddEducations"
+        mc:Ignorable="d"
+        Title="Профиль пользователя" Height="393.298" Width="430.83" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid>
+        <Button x:Name="BtnExit" HorizontalAlignment="Right" Margin="0,0,270,13" VerticalAlignment="Bottom" Width="132" Height="35" FontSize="18" Click="BtnExit_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Cancel_32px.png" Height="29"/>
+                <TextBlock Text=" Закрыть" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="21,46,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBox Name="TxbxUserId" IsEnabled="False" HorizontalAlignment="Left" Height="33" Margin="131,44,0,0" Text="TextBox" VerticalAlignment="Top" Width="267" FontSize="18" TextAlignment="Center">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="TxbxLastname" HorizontalAlignment="Left" Height="33" Margin="131,82,0,0" Text="TextBox" VerticalAlignment="Top" Width="267" FontSize="18" TextAlignment="Center" IsEnabled="False">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="TxbxFirstname" HorizontalAlignment="Left" Height="33" Margin="131,120,0,0" Text="TextBox" VerticalAlignment="Top" Width="267" FontSize="18" TextAlignment="Center" IsEnabled="False">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="TxbxMiddlename" HorizontalAlignment="Left" Height="33" Margin="131,158,0,0" Text="TextBox" VerticalAlignment="Top" Width="267" FontSize="18" TextAlignment="Center" IsEnabled="False">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="TxbxPosition" HorizontalAlignment="Left" Height="33" Margin="131,196,0,0" Text="TextBox" VerticalAlignment="Top" Width="267" FontSize="18" TextAlignment="Center" IsEnabled="False">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="TxbxEmail" HorizontalAlignment="Left" Height="33" Margin="131,234,0,0" Text="TextBox" VerticalAlignment="Top" Width="267" FontSize="18" TextAlignment="Center" IsEnabled="False">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="21,84,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Имя:" HorizontalAlignment="Left" Margin="20,122,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.349,2.179" FontWeight="Bold"/>
+        <Label Content="Отчество:" HorizontalAlignment="Left" Margin="20,159,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.349,2.179" FontWeight="Bold"/>
+        <Label Content="Должность:" HorizontalAlignment="Left" Margin="20,198,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.349,2.179" FontWeight="Bold"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="20,236,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.349,2.179" FontWeight="Bold"/>
+        <Button x:Name="BtnChangeProfile" HorizontalAlignment="Right" Margin="0,0,18,13" VerticalAlignment="Bottom" Width="132" Height="35" FontSize="18" Click="BtnChangeProfile_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Source/Edit Property_32px.png" Height="29"/>
+                <TextBlock Name="TxBlEdit" Text=" Изменить" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+    </Grid>
+</Window>

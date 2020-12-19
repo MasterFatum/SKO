@@ -1,0 +1,96 @@
+﻿<Window x:Class="Authorization.Registrations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Authorization"
+        mc:Ignorable="d"
+        Title="Регистрация нового пользователя" Height="489.631" Width="549.432" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid>
+        <Button x:Name="BtnRegistration" HorizontalAlignment="Left" Margin="368,391,0,0" VerticalAlignment="Top" Width="151" Height="53" FontSize="18" Click="BtnRegistration_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Source/Add User _32px.png"  Height="29"/>
+                <TextBlock Text=" Регистрация" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="BtnClose" HorizontalAlignment="Left" Margin="10,391,0,0" VerticalAlignment="Top" Width="151" Height="53" FontSize="18" Click="BtnClose_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Source/Cancel_32px.png" Height="29"/>
+                <TextBlock Text=" Закрыть" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="BtnClear" HorizontalAlignment="Left" Margin="196,391,0,0" VerticalAlignment="Top" Width="135" Height="53" FontSize="18" Click="BtnClear_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Source/Clear_32px.png"  Height="29"/>
+                <TextBlock Text=" Очистить" Height="26"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="TxbxLastname" HorizontalAlignment="Left" Height="40" Margin="158,49,0,0" VerticalAlignment="Top" Width="361" FontSize="18" TextChanged="TxbxLastname_TextChanged">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="TxbxFirstname" HorizontalAlignment="Left" Height="40" Margin="158,94,0,0" VerticalAlignment="Top" Width="361" FontSize="18">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="TxbxMiddlename" HorizontalAlignment="Left" Height="40" Margin="158,139,0,0" VerticalAlignment="Top" Width="361" FontSize="18">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <ComboBox x:Name="CbxPosition" HorizontalAlignment="Left" Margin="158,184,0,0" VerticalAlignment="Top" Width="361" FontSize="18" Height="40">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+            <ComboBoxItem Content="Учитель биологии"/>
+            <ComboBoxItem Content="Учитель математики"/>
+            <ComboBoxItem Content="Учитель английского языка"/>
+            <ComboBoxItem Content="Учитель информатики"/>
+            <ComboBoxItem Content="Учитель географии"/>
+            <ComboBoxItem Content="Учитель истории и обществознания"/>
+            <ComboBoxItem Content="Учитель русского языка и литературы"/>
+            <ComboBoxItem Content="Учитель физики"/>
+            <ComboBoxItem Content="Учитель химии"/>
+            <ComboBoxItem Content="Учитель шахмат"/>
+            <ComboBoxItem Content="Учитель ИЗО"/>
+            <ComboBoxItem Content="Основы проектной деятельности"/>
+            <ComboBoxItem Content="Педагог-организатор"/>
+            <ComboBoxItem Content="Психолог"/>
+            <ComboBoxItem Content="Другое"/>
+        </ComboBox>
+        <Label Content="Должность" HorizontalAlignment="Left" Margin="8,184,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="TxbxEmail" HorizontalAlignment="Left" Height="40" Margin="158,229,0,0" VerticalAlignment="Top" Width="361" FontSize="18">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <PasswordBox x:Name="PwdBox" HorizontalAlignment="Left" Margin="158,274,0,0" VerticalAlignment="Top" Height="40" Width="361" FontSize="18">
+            <PasswordBox.Effect>
+                <DropShadowEffect/>
+            </PasswordBox.Effect>
+        </PasswordBox>
+        <PasswordBox x:Name="PwdBoxReplase" HorizontalAlignment="Left" Margin="158,319,0,0" VerticalAlignment="Top" Height="40" Width="361" FontSize="18">
+            <PasswordBox.Effect>
+                <DropShadowEffect/>
+            </PasswordBox.Effect>
+        </PasswordBox>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Пароль еще раз" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top" FontSize="18"/>
+
+    </Grid>
+</Window>
