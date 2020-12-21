@@ -70,7 +70,6 @@ namespace BLL.Concrete
             dataGrid.Columns[8].Visibility = Visibility.Hidden;
             dataGrid.Columns[9].Visibility = Visibility.Hidden;
             dataGrid.Columns[10].Visibility = Visibility.Hidden;
-
         }
 
         public void SetConnectionString(string connectionString)

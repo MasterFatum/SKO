@@ -13,7 +13,7 @@
         </TextBox>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="12,180,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="12,223,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Button Name="BtnAuthorize" HorizontalAlignment="Left" Margin="243,327,0,0" VerticalAlignment="Top" Width="132" Height="57" FontSize="18" Click="BtnAuthorize_Click" TabIndex="5">
+        <Button Name="BtnAuthorize" HorizontalAlignment="Left" Margin="12,322,0,0" VerticalAlignment="Top" Width="132" Height="57" FontSize="18" Click="BtnAuthorize_Click" TabIndex="5">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Source/Connected_32px.png"  Height="29"/>
                 <TextBlock Text=" Войти" Height="26"/>
@@ -31,7 +31,7 @@
                 <ComboBoxItem Content="Администратор"/>
             </ComboBox>
         </GroupBox>
-        <Button x:Name="BtnAuthorizeExit" HorizontalAlignment="Left" Margin="12,327,0,0" VerticalAlignment="Top" Width="132" Height="57" FontSize="18" Click="BtnAuthorizeExit_Click" TabIndex="4">
+        <Button x:Name="BtnAuthorizeExit" HorizontalAlignment="Left" Margin="243,322,0,0" VerticalAlignment="Top" Width="132" Height="57" FontSize="18" Click="BtnAuthorizeExit_Click" TabIndex="4">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Source/Shutdown_32px.png"  Height="29"/>
                 <TextBlock Text=" Выйти" Height="26"/>
@@ -40,7 +40,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <CheckBox x:Name="ChkBoxSaveUser" Content="Запомнить пользователя" Margin="95,283,86,0" VerticalAlignment="Top" FontSize="16" TabIndex="3"/>
+        <CheckBox x:Name="ChkBoxSaveUser" Content="Запомнить пользователя" Margin="95,280,86,0" VerticalAlignment="Top" FontSize="16" TabIndex="3"/>
         <PasswordBox x:Name="TxbxPassword" HorizontalAlignment="Left" Margin="89,223,0,0" VerticalAlignment="Top" Width="286" Height="34" FontSize="18" TabIndex="2">
             <PasswordBox.Effect>
                 <DropShadowEffect/>

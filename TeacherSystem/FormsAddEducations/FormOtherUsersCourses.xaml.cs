@@ -33,21 +33,21 @@ namespace UserSystem.FormsAddEducations
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            CbxOtherUsersCourses.ItemsSource = new UserRepository().GetFioUsers();
+            CbxUsers.ItemsSource = new UserRepository().GetFioUsers();
         }
 
         private void BtnShowOtherUsersCourses_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (CbxOtherUsersCourses.SelectedIndex != -1)
+                if (CbxUsers.SelectedIndex != -1)
                 {
 
                     //АНАЛИЗИРУЕМ COMBOBOX
 
-                    if (CbxOtherUsersCategory.SelectedIndex == 0)
+                    if (CbxCategory.SelectedIndex == 0)
                     {
-                        String usernameFio = CbxOtherUsersCourses.SelectedItem.ToString();
+                        String usernameFio = CbxUsers.SelectedItem.ToString();
 
                         String[] words = usernameFio.Split(new [] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -56,13 +56,14 @@ namespace UserSystem.FormsAddEducations
 
                         new OtherRepository().SettingDataGridUsers(DataGridOtherUsersCategory);
                     }
-                    else if (CbxOtherUsersCategory.SelectedIndex != 0)
+                    else if (CbxCategory.SelectedIndex != 0)
                     {
-                        String usernameFio = CbxOtherUsersCourses.SelectedItem.ToString();
+                        String usernameFio = CbxUsers.SelectedItem.ToString();
 
                         String[] words = usernameFio.Split(new [] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                        DataGridOtherUsersCategory.ItemsSource = courseRepository.GetCoursesByFio(words[0], words[1], words[2], ((ComboBoxItem)CbxOtherUsersCategory.SelectedItem).Content.ToString());
+                        DataGridOtherUsersCategory.ItemsSource = 
+                            courseRepository.GetCoursesByFio(words[0], words[1], words[2], ((ComboBoxItem)CbxCategory.SelectedItem).Content.ToString());
 
                         new OtherRepository().SettingDataGridUsers(DataGridOtherUsersCategory);
                     }
@@ -93,7 +94,7 @@ namespace UserSystem.FormsAddEducations
                 }
 
                 UserId = items.UserId;
-                Lastname = CbxOtherUsersCourses.SelectedItem.ToString();
+                Lastname = CbxUsers.SelectedItem.ToString();
                 Category = items.Category;
                 Title = items.Title;
                 Description = items.Description;

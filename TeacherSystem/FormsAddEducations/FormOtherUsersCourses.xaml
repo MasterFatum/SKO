@@ -17,7 +17,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox x:Name="CbxOtherUsersCategory" HorizontalAlignment="Right" Margin="0,65,357,0" VerticalAlignment="Top" Width="288" FontSize="18">
+        <ComboBox x:Name="CbxCategory" HorizontalAlignment="Right" Margin="0,65,357,0" VerticalAlignment="Top" Width="288" FontSize="18">
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
@@ -31,7 +31,7 @@
             <ComboBoxItem Content="Размещение материалов на сайте"/>
             <ComboBoxItem Content="Другое"/>
         </ComboBox>
-        <ComboBox x:Name="CbxOtherUsersCourses" HorizontalAlignment="Right" Margin="0,17,357,0" VerticalAlignment="Top" Width="288" FontSize="18">
+        <ComboBox x:Name="CbxUsers" HorizontalAlignment="Right" Margin="0,17,357,0" VerticalAlignment="Top" Width="288" FontSize="18">
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
