@@ -31,5 +31,11 @@ namespace BLL.Abstract
 
         int GetUserIdByFio(string lastname, string firstname, string middlename);
 
+        bool UserIsOnline(int id);
+
+        bool UserIsOffline(int id);
+
+        IEnumerable<UsersInOnline> UsersInOnline();
+
     }
 }

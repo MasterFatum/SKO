@@ -52,6 +52,7 @@ namespace Authorization
                         user.Password = PwdBox.Password;
                         user.Date = String.Format(
                             $"{DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}");
+                        user.IsOnline = false;
 
                         userRepository.AddUser(user);
 
@@ -70,8 +71,6 @@ namespace Authorization
             {
                 MessageBox.Show(ex.Message);
             }
-
-            
         }
 
         private void BtnClear_Click(object sender, RoutedEventArgs e)

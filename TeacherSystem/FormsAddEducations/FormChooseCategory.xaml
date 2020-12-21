@@ -19,7 +19,7 @@
             <ComboBoxItem Content="Размещение материалов на сайте"/>
             <ComboBoxItem Content="Другое"/>
         </ComboBox>
-        <Button x:Name="BtnMainAdd" HorizontalAlignment="Left" Margin="159,75,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnMainAdd_Click">
+        <Button x:Name="BtnMainAdd" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnMainAdd_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="../Source/Add Property_32px.png" Height="29"/>
                 <TextBlock Text=" Добавить" Height="26"/>
@@ -28,7 +28,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="BtnChooseEducation" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnChooseEducation_Click">
+        <Button x:Name="BtnChooseEducation" HorizontalAlignment="Left" Margin="159,75,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnChooseEducation_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="../Source/Cancel_32px.png" Height="29"/>
                 <TextBlock Text=" Закрыть" Height="26"/>

@@ -18,7 +18,7 @@ namespace Bll.Concrete
 {
     public class CourseRepository : ICourseRepository
     {
-        SokoContext sokoContext = new SokoContext();
+        SkoContext _skoContext = new SkoContext();
 
         SaveFileDialog saveFile;
 
@@ -26,8 +26,8 @@ namespace Bll.Concrete
         {
             try
             {
-                sokoContext.Courses.Add(course);
-                sokoContext.SaveChanges();
+                _skoContext.Courses.Add(course);
+                _skoContext.SaveChanges();
                 MessageBox.Show("Запись успешно добавлена!", "Добавление записи", MessageBoxButton.OK,
                     MessageBoxImage.Information);
 
@@ -46,12 +46,12 @@ namespace Bll.Concrete
         {
             try
             {
-                Course course = sokoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
+                Course course = _skoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
 
                 if (course != null)
                 {
-                    sokoContext.Courses.Remove(course);
-                    sokoContext.SaveChanges();
+                    _skoContext.Courses.Remove(course);
+                    _skoContext.SaveChanges();
                     MessageBox.Show("Запись успешно удалена!", "Удаление записи", MessageBoxButton.OK,
                         MessageBoxImage.Information);
                 }
@@ -67,7 +67,7 @@ namespace Bll.Concrete
         {
             try
             {
-                Course courseEdit = sokoContext.Courses.Where(u => u.UserId == course.UserId)
+                Course courseEdit = _skoContext.Courses.Where(u => u.UserId == course.UserId)
                     .FirstOrDefault(c => c.Id == course.Id);
 
                 if (courseEdit != null)
@@ -83,8 +83,8 @@ namespace Bll.Concrete
                             String.Format($"{DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}");
                     }
 
-                    sokoContext.Courses.AddOrUpdate(courseEdit);
-                    sokoContext.SaveChanges();
+                    _skoContext.Courses.AddOrUpdate(courseEdit);
+                    _skoContext.SaveChanges();
 
                     MessageBox.Show("Запись успешно отредактирована!", "Редактирование записи", MessageBoxButton.OK,
                         MessageBoxImage.Information);
@@ -105,7 +105,7 @@ namespace Bll.Concrete
         {
             try
             {
-                IQueryable<Course> courseses = new SokoContext().Courses.Where(u => u.UserId == userId);
+                IQueryable<Course> courseses = new SkoContext().Courses.Where(u => u.UserId == userId);
 
                 return courseses.ToList();
             }
@@ -122,7 +122,7 @@ namespace Bll.Concrete
 
             try
             {
-                courseses = sokoContext.Courses.Where(u => u.UserId == userId).Where(c => c.Category == category);
+                courseses = _skoContext.Courses.Where(u => u.UserId == userId).Where(c => c.Category == category);
 
             }
             catch (Exception ex)
@@ -147,10 +147,10 @@ namespace Bll.Concrete
         {
             try
             {
-                User userId = sokoContext.Users.OrderBy(l => l.Lastname).Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
+                User userId = _skoContext.Users.OrderBy(l => l.Lastname).Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
                     .FirstOrDefault(m => m.Middlename == middlename);
 
-                IEnumerable<Course> courseses = sokoContext.Courses.Where(u => u.UserId == userId.Id)
+                IEnumerable<Course> courseses = _skoContext.Courses.Where(u => u.UserId == userId.Id)
                     .Where(c => c.Category == category);
 
                 return courseses.ToList();
@@ -166,10 +166,10 @@ namespace Bll.Concrete
         {
             try
             {
-                User userId = sokoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
+                User userId = _skoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
                     .FirstOrDefault(m => m.Middlename == middlename);
 
-                IEnumerable<Course> courseses = sokoContext.Courses.Where(u => u.UserId == userId.Id);
+                IEnumerable<Course> courseses = _skoContext.Courses.Where(u => u.UserId == userId.Id);
 
                 return courseses.ToList();
             }
@@ -184,15 +184,15 @@ namespace Bll.Concrete
         {
             try
             {
-                Course course = sokoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
+                Course course = _skoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
 
                 if (course != null)
                 {
                     course.Evaluation = rating;
                     course.Evaluating = evaluating;
 
-                    sokoContext.Courses.AddOrUpdate(course);
-                    sokoContext.SaveChanges();
+                    _skoContext.Courses.AddOrUpdate(course);
+                    _skoContext.SaveChanges();
 
                     MessageBox.Show("Баллы успешно назначены!");
                 }
@@ -207,7 +207,7 @@ namespace Bll.Concrete
         {
             try
             {
-                return sokoContext.Courses.Where(x => x.UserId == userId).Sum(r => r.Evaluation).ToString();
+                return _skoContext.Courses.Where(x => x.UserId == userId).Sum(r => r.Evaluation).ToString();
             }
             catch (Exception ex)
             {
@@ -220,10 +220,10 @@ namespace Bll.Concrete
         {
             try
             {
-                User userId = sokoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
+                User userId = _skoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
                     .FirstOrDefault(m => m.Middlename == middlename);
 
-                var summary = sokoContext.Courses.Where(u => u.UserId == userId.Id).GroupBy(c => c.Category).Select(c => new
+                var summary = _skoContext.Courses.Where(u => u.UserId == userId.Id).GroupBy(c => c.Category).Select(c => new
                 {
                     category = c.Key,
                     evaluation = c.Sum(e => e.Evaluation)

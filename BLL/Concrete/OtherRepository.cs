@@ -21,6 +21,7 @@ namespace BLL.Concrete
             dataGrid.Columns[6].Header = "Оценивающий";
             dataGrid.Columns[7].Header = "Дата создания";
             dataGrid.Columns[9].Header = "Дата редактирования";
+            dataGrid.Columns[10].Visibility = Visibility.Hidden;
 
         }
 
@@ -37,6 +38,7 @@ namespace BLL.Concrete
             dataGrid.Columns[6].Header = "Email";
             dataGrid.Columns[8].Header = "Дата регистрации";
             dataGrid.Columns[9].Visibility = Visibility.Hidden;
+            dataGrid.Columns[10].Header = "Онлайн";
 
         }
 

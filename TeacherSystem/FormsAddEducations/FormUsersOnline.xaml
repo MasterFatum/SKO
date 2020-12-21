@@ -1,0 +1,27 @@
+﻿<Window x:Class="TeacherSystem.FormsAddEducations.FormUsersOnline"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeacherSystem.FormsAddEducations"
+        mc:Ignorable="d"
+        Title="Пользователи в системе" Height="395" Width="541.197" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid Margin="0,0,-14,9">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnClose" HorizontalAlignment="Right" Margin="0,0,24,0" VerticalAlignment="Bottom" Width="132" Height="35" FontSize="18" Click="BtnClose_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/TeacherSystem;component/Source/Cancel_32px.png" Height="29"/>
+                <TextBlock Text=" Закрыть" Height="26"/>
+            </StackPanel>
+        </Button>
+        <ListBox x:Name="LbUserOnline" Margin="10,10,24,48" FontSize="18"/>
+        <Label Content="Всего пользователей:" HorizontalAlignment="Left" Margin="5,305,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="LblUsersCount" Content="0" HorizontalAlignment="Left" Margin="151,302,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

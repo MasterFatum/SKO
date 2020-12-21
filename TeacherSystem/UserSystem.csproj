@@ -95,6 +95,9 @@
     <Compile Include="FormsAddEducations\FormProfile.xaml.cs">
       <DependentUpon>FormProfile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FormsAddEducations\FormUsersOnline.xaml.cs">
+      <DependentUpon>FormUsersOnline.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FormsAddEducations\FormViewItemsFull.xaml.cs">
       <DependentUpon>FormViewItemsFull.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FormsAddEducations\FormProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsAddEducations\FormUsersOnline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

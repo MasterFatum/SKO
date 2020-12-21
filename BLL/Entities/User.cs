@@ -25,5 +25,7 @@ namespace BLL.Entities
 
         public ICollection<Course> Courses { get; set; }
 
+        public bool IsOnline { get; set; }
+
     }
 }

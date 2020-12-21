@@ -5,9 +5,9 @@ namespace BLL
 {
     
 
-    public class SokoContext : DbContext
+    public class SkoContext : DbContext
     {
-        public SokoContext()
+        public SkoContext()
             : base("name=Soko")
         {
         }

@@ -7,6 +7,7 @@ using System.Windows.Media;
 using Bll.Concrete;
 using BLL.Concrete;
 using BLL.Entities;
+using TeacherSystem.FormsAddEducations;
 using UserSystem.FormsAddEducations;
 
 namespace TeacherSystem
@@ -34,6 +35,8 @@ namespace TeacherSystem
             TxbxUserPosition.Text = user.Position;
             Email = user.Email;
 
+            UserIsOnline = new UserRepository().UserIsOnline(user.Id);
+
         }
 
         private void MainForm_Loaded(object sender, RoutedEventArgs e)
@@ -55,9 +58,11 @@ namespace TeacherSystem
         public string Date { get; set; }
         public string Hyperlink { get; set; }
         public string FileName { get; set; }
+        public bool UserIsOnline { get; set; }
 
         private void BtnMainExit_Click(object sender, RoutedEventArgs e)
         {
+            UserIsOnline = new UserRepository().UserIsOffline(Convert.ToInt32(TxbxUserId.Text));
             Application.Current.Shutdown();
         }
 
@@ -213,6 +218,10 @@ namespace TeacherSystem
                 e.Row.Background = green;
             }
         }
-        
+
+        private void BtnUsersIsOnline_Click(object sender, RoutedEventArgs e)
+        {
+            new FormUsersOnline().ShowDialog();
+        }
     }
 }

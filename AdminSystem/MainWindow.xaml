@@ -4,18 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Система управления качеством образования (Интерфейс администратора)" Height="600.78" Width="1067.308" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="Window_Loaded" ResizeMode="CanMinimize">
-    <Grid>
+        Title="Система управления качеством образования (Интерфейс администратора)" Height="600.78" Width="1104.308" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="Window_Loaded" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,4,0">
         <Button x:Name="BtnExit"  HorizontalAlignment="Right" Margin="0,0,10,9" VerticalAlignment="Bottom" Width="117" Height="45" FontSize="18" Click="BtnMainExit_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-            <StackPanel Orientation="Horizontal">
-                <Image Source="Source/Shutdown_32px.png" Height="29"/>
-                <TextBlock Text=" Выйти" Height="26"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Image Source="Source/Shutdown_32px.png" Height="29" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                <TextBlock Text=" Выйти" Height="26" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
             </StackPanel>
         </Button>
-        <Button x:Name="BtnMainUsersManage"  HorizontalAlignment="Right" Margin="0,0,884,10" VerticalAlignment="Bottom" Width="161" Height="44" FontSize="18" Click="BtnMainUsersManage_Click">
+        <Button x:Name="BtnMainUsersManage"  HorizontalAlignment="Right" Margin="0,0,908,10" VerticalAlignment="Bottom" Width="161" Height="44" FontSize="18" Click="BtnMainUsersManage_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -25,10 +25,10 @@
             </StackPanel>
         </Button>
 
-        <GroupBox Header="Пользователи системы" HorizontalAlignment="Left" Height="470" Margin="10,0,0,75" VerticalAlignment="Bottom" Width="1041">
-            <DataGrid Name="DataGridAllUsers" IsReadOnly="True" HorizontalAlignment="Left" Margin="0,0,-2,2" Width="1031" MouseDoubleClick="DataGridAllUsers_MouseDoubleClick" FontSize="16"/>
+        <GroupBox Header="Пользователи системы" HorizontalAlignment="Left" Height="470" Margin="10,0,0,75" VerticalAlignment="Bottom" Width="1074">
+            <DataGrid Name="DataGridAllUsers" IsReadOnly="True" Margin="0,0,-2,2" MouseDoubleClick="DataGridAllUsers_MouseDoubleClick" FontSize="16"/>
         </GroupBox>
-        <TextBox Name="TxbxSearch"  HorizontalAlignment="Left" Height="44" Margin="393,509,0,0" VerticalAlignment="Top" Width="291" FontSize="18" TextChanged="TxbxSearch_TextChanged">
+        <TextBox Name="TxbxSearch"  HorizontalAlignment="Left" Height="44" Margin="393,509,0,0" VerticalAlignment="Top" Width="312" FontSize="18" TextChanged="TxbxSearch_TextChanged">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
@@ -37,23 +37,23 @@
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-            <StackPanel Orientation="Horizontal">
-                <Image Source="Source/Find User_32px.png" Height="29"/>
-                <TextBlock Text=" Найти" Height="26"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Image Source="Source/Find User_32px.png" Height="29" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                <TextBlock Text=" Найти" Height="26" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
             </StackPanel>
         </Button>
         <Button x:Name="BtnUpdate"  HorizontalAlignment="Right" Margin="0,0,132,9" VerticalAlignment="Bottom" Width="125" Height="45" FontSize="18" Click="BtnUpdate_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-            <StackPanel Orientation="Horizontal">
-                <Image Source="Source/Refresh_32px.png" Height="29"/>
-                <TextBlock Text=" Обновить" Height="26"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Image Source="Source/Refresh_32px.png" Height="29" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                <TextBlock Text=" Обновить" Height="26" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
             </StackPanel>
         </Button>
-        <Label Content="Всего пользователей:" HorizontalAlignment="Left" Margin="870,2,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label Name="LblAllUsers" Content="100" HorizontalAlignment="Left" Margin="1013,2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.269" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="BtnSummaryStatement"  HorizontalAlignment="Right" Margin="0,0,673,9" VerticalAlignment="Bottom" Width="206" Height="45" FontSize="18" Click="BtnSummaryStatement_Click">
+        <Label Content="Всего пользователей:" HorizontalAlignment="Left" Margin="896,2,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Name="LblAllUsers" Content="100" HorizontalAlignment="Left" Margin="1039,2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.269" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="BtnSummaryStatement"  HorizontalAlignment="Right" Margin="0,0,697,9" VerticalAlignment="Bottom" Width="206" Height="45" FontSize="18" Click="BtnSummaryStatement_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
