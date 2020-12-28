@@ -13,8 +13,8 @@ namespace UserSystem.FormsAddEducations
 {
     public partial class FormAdd
     {
-        CourseRepository courseRepository = new CourseRepository();
-        FtpRepository ftpRepository = new FtpRepository();
+        readonly CourseRepository courseRepository = new CourseRepository();
+        readonly FtpRepository ftpRepository = new FtpRepository();
 
         public string SelectedCategory { get; set; }
         public int UserIdDirectory { get; set; }

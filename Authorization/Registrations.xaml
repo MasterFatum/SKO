@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Регистрация нового пользователя" Height="489.631" Width="549.432" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow">
     <Grid>
-        <Button x:Name="BtnRegistration" HorizontalAlignment="Left" Margin="368,391,0,0" VerticalAlignment="Top" Width="151" Height="53" FontSize="18" Click="BtnRegistration_Click">
+        <Button x:Name="BtnRegistration" HorizontalAlignment="Left" Margin="10,391,0,0" VerticalAlignment="Top" Width="151" Height="53" FontSize="18" Click="BtnRegistration_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Source/Add User _32px.png"  Height="29"/>
                 <TextBlock Text=" Регистрация" Height="26"/>
@@ -16,7 +16,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="BtnClose" HorizontalAlignment="Left" Margin="10,391,0,0" VerticalAlignment="Top" Width="151" Height="53" FontSize="18" Click="BtnClose_Click">
+        <Button x:Name="BtnClose" HorizontalAlignment="Left" Margin="368,391,0,0" VerticalAlignment="Top" Width="151" Height="53" FontSize="18" Click="BtnClose_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Source/Cancel_32px.png" Height="29"/>
                 <TextBlock Text=" Закрыть" Height="26"/>

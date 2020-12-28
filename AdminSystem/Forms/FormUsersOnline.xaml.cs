@@ -4,14 +4,13 @@ using System.Linq;
 using System.Windows;
 using BLL.Concrete;
 
-namespace TeacherSystem.FormsAddEducations
+namespace AdminSystem.Forms
 {
-    public partial class FormUsersOnline : Window
+    public partial class FormUsersOnline 
     {
         public FormUsersOnline()
         {
             InitializeComponent();
-            
         }
 
         private void BtnClose_Click(object sender, RoutedEventArgs e)
@@ -37,6 +36,7 @@ namespace TeacherSystem.FormsAddEducations
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
     }
 }

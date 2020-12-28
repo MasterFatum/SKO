@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         Title="Редактирование записи" Height="500" Width="615" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="BtnEditExit" HorizontalAlignment="Left" Margin="10,420,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnEditExit_Click">
+        <Button x:Name="BtnEditExit" HorizontalAlignment="Left" Margin="449,420,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnEditExit_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="../Source/Cancel_32px.png" Height="29"/>
                 <TextBlock Text=" Закрыть" Height="26"/>
@@ -15,7 +15,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="BtnEditSave" HorizontalAlignment="Left" Margin="449,420,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnEditSave_Click">
+        <Button x:Name="BtnEditSave" HorizontalAlignment="Left" Margin="10,420,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnEditSave_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="../Source/Save_32px.png" Height="29"/>
                 <TextBlock Text=" Сохранить" Height="26"/>

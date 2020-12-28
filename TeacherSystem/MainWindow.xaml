@@ -8,7 +8,7 @@
         Title="Система управления качеством образования (Интерфейс преподавателя)" Height="679.055" Width="1058" MinHeight="680" MinWidth="1058" WindowStartupLocation="CenterScreen" Closing="MainForm_Closing" Loaded="MainForm_Loaded">
     <Grid Margin="0,0,0,12">
         <DataGrid x:Name="DataGridMain" IsReadOnly="True" Margin="10,41,245,64" FontSize="16" SelectionChanged="DataGridMain_SelectionChanged" MouseDoubleClick="DataGridMain_MouseDoubleClick" LoadingRow="DataGridMain_LoadingRow"/>
-        <Button x:Name="BtnMainExit"  HorizontalAlignment="Right" Margin="0,0,10,1" VerticalAlignment="Bottom" Width="126" Height="44" FontSize="18" Click="BtnMainExit_Click">
+        <Button x:Name="BtnMainExit"  HorizontalAlignment="Right" Margin="0,0,10,1" VerticalAlignment="Bottom" Width="117" Height="44" FontSize="18" Click="BtnMainExit_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Source/Shutdown_32px.png" Height="29"/>
                 <TextBlock Text=" Выйти" Height="26"/>
@@ -45,10 +45,10 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="BtnMainUpdate" HorizontalAlignment="Left" Margin="710,0,0,1" VerticalAlignment="Bottom" Width="154" Height="44" FontSize="18" Click="BtnMainUpdate_Click">
+        <Button x:Name="BtnMainUpdate" HorizontalAlignment="Left" Margin="710,0,0,1" VerticalAlignment="Bottom" Width="199" Height="44" FontSize="18" Click="BtnMainUpdate_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Source/Refresh_32px.png" Height="29"/>
-                <TextBlock Text=" Обновить" Height="26"/>
+                <TextBlock Text=" Обновить таблицу" Height="26"/>
             </StackPanel>
             <Button.Effect>
                 <DropShadowEffect/>
@@ -58,7 +58,7 @@
         <Label x:Name="LblMeddlename" Content="Отчество" Margin="0,425,86,0" VerticalAlignment="Top" RenderTransformOrigin="-0.413,0.235" FontSize="14" HorizontalAlignment="Right"/>
         <Label x:Name="LblUserId" Content="ID пользователя" HorizontalAlignment="Right" Margin="0,238,57,0" VerticalAlignment="Top" RenderTransformOrigin="-0.413,0.235" FontSize="14"/>
         <Label x:Name="LblPosition" Content="Должность" HorizontalAlignment="Right" Margin="0,487,76,0" VerticalAlignment="Top" RenderTransformOrigin="-0.413,0.235" FontSize="14"/>
-        <GroupBox Header="Пользователь" HorizontalAlignment="Right" Height="346" Margin="0,218,8,0" VerticalAlignment="Top" Width="232"/>
+        <GroupBox Header="Пользователь" HorizontalAlignment="Right" Height="346" Margin="0,220,8,0" VerticalAlignment="Top" Width="232"/>
         <TextBox x:Name="TxbxUserId" IsReadOnly="True" HorizontalAlignment="Right" Height="25" Margin="0,272,18,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" TextAlignment="Center" FontSize="14" FontWeight="Bold">
             <TextBox.Effect>
                 <DropShadowEffect/>
@@ -134,6 +134,6 @@
         </Button>
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="379,13,0,0" Stroke="Black" VerticalAlignment="Top" Width="20" Fill="Green"/>
         <Label Content="Баллы выставлены, отредактированно" HorizontalAlignment="Left" Margin="404,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.308"/>
-        <Button x:Name="BtnUsersIsOnline" Content="Пользователи в системе" HorizontalAlignment="Right" Margin="0,6,10,0" VerticalAlignment="Top" Width="162" Click="BtnUsersIsOnline_Click"/>
+        <Button x:Name="BtnUsersIsOnline" Content="Пользователи онлайн" HorizontalAlignment="Right" Margin="0,6,10,0" VerticalAlignment="Top" Width="162" Click="BtnUsersIsOnline_Click"/>
     </Grid>
 </Window>

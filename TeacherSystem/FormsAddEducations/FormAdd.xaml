@@ -19,7 +19,7 @@
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <Button Name="BtnAdd" Margin="444,425,15,0" VerticalAlignment="Top" Width="132" Height="35" RenderTransformOrigin="0.9,0.199" FontSize="18" Click="BtnAdd_Click">
+        <Button Name="BtnAdd" Margin="10,0,0,6" VerticalAlignment="Bottom" Width="132" Height="35" RenderTransformOrigin="0.9,0.199" FontSize="18" Click="BtnAdd_Click" HorizontalAlignment="Left">
             <StackPanel Orientation="Horizontal">
                 <Image Source="../Source/Save_32px.png" Height="29"/>
                 <TextBlock Text=" Сохранить" Height="26"/>
@@ -28,7 +28,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Name="BtnClose" HorizontalAlignment="Left" Margin="10,425,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="Button_Click">
+        <Button Name="BtnClose" HorizontalAlignment="Right" Margin="0,0,17,6" VerticalAlignment="Bottom" Width="132" Height="35" FontSize="18" Click="Button_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="../Source/Cancel_32px.png" Height="29"/>
                 <TextBlock Text=" Закрыть" Height="26"/>
@@ -38,7 +38,7 @@
             </Button.Effect>
         </Button>
         <Label Content="Категория" HorizontalAlignment="Left" Margin="305,18,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <TextBox x:Name="TxbxSelectedCategory" IsEnabled="False" HorizontalAlignment="Left" IsReadOnly="False" Height="31" Margin="164,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="380" FontSize="18" TextAlignment="Center">
+        <TextBox x:Name="TxbxSelectedCategory" IsEnabled="False" HorizontalAlignment="Left" IsReadOnly="False" Height="31" Margin="164,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="380" FontSize="18" TextAlignment="Center" FontWeight="Bold">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>

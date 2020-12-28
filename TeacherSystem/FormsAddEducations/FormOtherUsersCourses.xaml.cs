@@ -24,7 +24,7 @@ namespace UserSystem.FormsAddEducations
         public string Hyperlink { get; set; }
         public string Filename { get; set; }
 
-        CourseRepository courseRepository = new CourseRepository();
+        readonly CourseRepository courseRepository = new CourseRepository();
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

@@ -11,7 +11,7 @@ namespace AdminSystem
 {
     public partial class MainWindow
     {
-        UserRepository userRepository = new UserRepository();
+        readonly UserRepository userRepository = new UserRepository();
 
         public string User { get; set; }
         public int Id { get; set; }
@@ -126,5 +126,9 @@ namespace AdminSystem
             }
         }
 
+        private void BtnUsersIsOnline_Click(object sender, RoutedEventArgs e)
+        {
+            new FormUsersOnline().ShowDialog();
+        }
     }
 }

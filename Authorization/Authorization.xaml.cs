@@ -8,10 +8,7 @@ namespace Authorization
 {
     public partial class MainWindow
     {
-        UserRepository userRepository = new UserRepository();
-
-        private const string ConnectionStringInside = "data source=NETSCHOOL;initial catalog=SOKO;integrated security=False;User ID=SOKOUser;Password=Admin;MultipleActiveResultSets=True;App=EntityFramework";
-        private const string ConnectionStringOutside = "data source=212.44.132.205,1435;initial catalog=SOKO;integrated security=False;User ID=SOKOUser;Password=Admin;MultipleActiveResultSets=True;App=EntityFramework";
+        readonly UserRepository userRepository = new UserRepository();
 
         public MainWindow()
         {
@@ -38,13 +35,10 @@ namespace Authorization
         private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
         {
 
-            if (CbxSetConnectionString.SelectedIndex != - 1)
-            {
                 try
                 {
                     switch (((ComboBoxItem)CbxAuthorizeAs.SelectedItem).Content.ToString())
                     {
-
 
                         //АВТОРИЗАЦИЯ ПОЛЬЗОВАТЕЛЯ
                         case "Преподаватель":
@@ -122,12 +116,6 @@ namespace Authorization
                     MessageBox.Show(ex.Message);
                     Application.Current.Shutdown();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Выберите тип подключения к сети!", "", MessageBoxButton.OK, MessageBoxImage.Asterisk);
-            }
-
         }
 
         private void AuthorizeForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -136,19 +124,6 @@ namespace Authorization
             {
                 Application.Current.Shutdown();
             }
-        }
-
-        private void CbxSetConnectionString_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (CbxSetConnectionString.SelectedIndex == 0)
-            {
-                new OtherRepository().SetConnectionString(ConnectionStringInside);
-            }
-            else if (CbxSetConnectionString.SelectedIndex == 1)
-            {
-                new OtherRepository().SetConnectionString(ConnectionStringOutside);
-            }
-            
         }
     }
 }

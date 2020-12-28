@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\FormUsersOnline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\FormViewCourseFull.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,6 +105,9 @@
     </Compile>
     <Compile Include="Forms\FormUsersManager.xaml.cs">
       <DependentUpon>FormUsersManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUsersOnline.xaml.cs">
+      <DependentUpon>FormUsersOnline.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormViewCourseFull.xaml.cs">
       <DependentUpon>FormViewCourseFull.xaml</DependentUpon>
@@ -220,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Source\Microsoft Excel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Cancel_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

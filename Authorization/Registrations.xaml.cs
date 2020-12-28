@@ -17,8 +17,8 @@ namespace Authorization
             TxbxLastname.TextChanged += TxbxLastname_TextChanged;
             TxbxMiddlename.TextChanged += TxbxLastname_TextChanged;
         }
-        
-        UserRepository userRepository = new UserRepository();
+
+        readonly UserRepository userRepository = new UserRepository();
 
         private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
@@ -42,17 +42,19 @@ namespace Authorization
                 {
                     if (PwdBox.Password != String.Empty && PwdBox.Password.Equals(PwdBoxReplase.Password))
                     {
-                        User user = new User();
-                        user.Lastname = TxbxLastname.Text.Trim();
-                        user.Firstname = TxbxFirstname.Text.Trim();
-                        user.Middlename = TxbxMiddlename.Text.Trim();
-                        user.Position = ((ComboBoxItem)CbxPosition.SelectedItem).Content.ToString();
-                        user.Privilege = "User";
-                        user.Email = TxbxEmail.Text.Trim();
-                        user.Password = PwdBox.Password;
-                        user.Date = String.Format(
-                            $"{DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}");
-                        user.IsOnline = false;
+                        User user = new User
+                        {
+                            Lastname = TxbxLastname.Text.Trim(),
+                            Firstname = TxbxFirstname.Text.Trim(),
+                            Middlename = TxbxMiddlename.Text.Trim(),
+                            Position = ((ComboBoxItem) CbxPosition.SelectedItem).Content.ToString(),
+                            Privilege = "User",
+                            Email = TxbxEmail.Text.Trim(),
+                            Password = PwdBox.Password,
+                            Date = String.Format(
+                                $"{DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}"),
+                            IsOnline = false
+                        };
 
                         userRepository.AddUser(user);
 

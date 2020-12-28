@@ -14,9 +14,9 @@ namespace TeacherSystem
 {
     public partial class MainWindow
     {
-        CourseRepository courseRepository = new CourseRepository();
-        OtherRepository otherRepository = new OtherRepository();
-        FtpRepository ftpRepository = new FtpRepository();
+        readonly CourseRepository courseRepository = new CourseRepository();
+        readonly OtherRepository otherRepository = new OtherRepository();
+        readonly FtpRepository ftpRepository = new FtpRepository();
 
         public MainWindow(User user)
         {
@@ -198,8 +198,8 @@ namespace TeacherSystem
         }
 
         readonly SolidColorBrush orange = new SolidColorBrush(Colors.Orange);
-        SolidColorBrush white = new SolidColorBrush(Colors.White);
-        SolidColorBrush green = new SolidColorBrush(Colors.Green);
+        readonly SolidColorBrush white = new SolidColorBrush(Colors.White);
+        readonly SolidColorBrush green = new SolidColorBrush(Colors.Green);
 
         private void DataGridMain_LoadingRow(object sender, DataGridRowEventArgs e)
         {

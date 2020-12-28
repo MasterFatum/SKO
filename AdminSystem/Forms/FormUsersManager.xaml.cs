@@ -9,8 +9,8 @@ namespace AdminSystem.Forms
 
     public partial class FormUsersManager
     {
-        UserRepository userRepository = new UserRepository();
-        FtpRepository ftpRepository = new FtpRepository();
+        readonly UserRepository userRepository = new UserRepository();
+        readonly FtpRepository ftpRepository = new FtpRepository();
 
         public string User { get; set; }
         public int UserId { get; set; }
@@ -197,16 +197,19 @@ namespace AdminSystem.Forms
                     
                     TxBlAddUser.Text = " Добавить";
 
-                    User user = new User();
+                    User user = new User
+                    {
+                        Firstname = TxbxFirstname.Text.Trim(),
+                        Lastname = TxbxLastname.Text.Trim(),
+                        Middlename = TxbxMiddlename.Text.Trim(),
+                        Position = TxbxPosition.Text.Trim(),
+                        Email = TxbxEmail.Text.Trim(),
+                        Password = TxbxPassword.Text.Trim(),
+                        Date = String.Format(
+                            $"{DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}"),
+                        Privilege = CbxPrivilege.SelectedItem.ToString()
+                    };
 
-                    user.Firstname = TxbxFirstname.Text.Trim();
-                    user.Lastname = TxbxLastname.Text.Trim();
-                    user.Middlename = TxbxMiddlename.Text.Trim();
-                    user.Position = TxbxPosition.Text.Trim();
-                    user.Email = TxbxEmail.Text.Trim();
-                    user.Password = TxbxPassword.Text.Trim();
-                    user.Date = String.Format($"{DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}");
-                    user.Privilege = CbxPrivilege.SelectedItem.ToString();
 
                     userRepository.AddUser(user);
 

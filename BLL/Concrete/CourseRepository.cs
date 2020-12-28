@@ -9,7 +9,6 @@ using BLL.Abstract;
 using BLL.Entities;
 using DataGrid = System.Windows.Controls.DataGrid;
 using MessageBox = System.Windows.MessageBox;
-using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 using TextBox = System.Windows.Controls.TextBox;
 using Excel = Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Interop.Excel;
@@ -18,16 +17,14 @@ namespace Bll.Concrete
 {
     public class CourseRepository : ICourseRepository
     {
-        SkoContext _skoContext = new SkoContext();
-
-        SaveFileDialog saveFile;
+        readonly SkoContext skoContext = new SkoContext();
 
         public void AddCourse(Course course, TextBox title, TextBox description, TextBox hyperlink, TextBox dataFileName)
         {
             try
             {
-                _skoContext.Courses.Add(course);
-                _skoContext.SaveChanges();
+                skoContext.Courses.Add(course);
+                skoContext.SaveChanges();
                 MessageBox.Show("Запись успешно добавлена!", "Добавление записи", MessageBoxButton.OK,
                     MessageBoxImage.Information);
 
@@ -46,12 +43,12 @@ namespace Bll.Concrete
         {
             try
             {
-                Course course = _skoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
+                Course course = skoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
 
                 if (course != null)
                 {
-                    _skoContext.Courses.Remove(course);
-                    _skoContext.SaveChanges();
+                    skoContext.Courses.Remove(course);
+                    skoContext.SaveChanges();
                     MessageBox.Show("Запись успешно удалена!", "Удаление записи", MessageBoxButton.OK,
                         MessageBoxImage.Information);
                 }
@@ -67,7 +64,7 @@ namespace Bll.Concrete
         {
             try
             {
-                Course courseEdit = _skoContext.Courses.Where(u => u.UserId == course.UserId)
+                Course courseEdit = skoContext.Courses.Where(u => u.UserId == course.UserId)
                     .FirstOrDefault(c => c.Id == course.Id);
 
                 if (courseEdit != null)
@@ -83,8 +80,8 @@ namespace Bll.Concrete
                             String.Format($"{DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}");
                     }
 
-                    _skoContext.Courses.AddOrUpdate(courseEdit);
-                    _skoContext.SaveChanges();
+                    skoContext.Courses.AddOrUpdate(courseEdit);
+                    skoContext.SaveChanges();
 
                     MessageBox.Show("Запись успешно отредактирована!", "Редактирование записи", MessageBoxButton.OK,
                         MessageBoxImage.Information);
@@ -122,7 +119,7 @@ namespace Bll.Concrete
 
             try
             {
-                courseses = _skoContext.Courses.Where(u => u.UserId == userId).Where(c => c.Category == category);
+                courseses = skoContext.Courses.Where(u => u.UserId == userId).Where(c => c.Category == category);
 
             }
             catch (Exception ex)
@@ -147,10 +144,10 @@ namespace Bll.Concrete
         {
             try
             {
-                User userId = _skoContext.Users.OrderBy(l => l.Lastname).Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
+                User userId = skoContext.Users.OrderBy(l => l.Lastname).Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
                     .FirstOrDefault(m => m.Middlename == middlename);
 
-                IEnumerable<Course> courseses = _skoContext.Courses.Where(u => u.UserId == userId.Id)
+                IEnumerable<Course> courseses = skoContext.Courses.Where(u => u.UserId == userId.Id)
                     .Where(c => c.Category == category);
 
                 return courseses.ToList();
@@ -166,10 +163,10 @@ namespace Bll.Concrete
         {
             try
             {
-                User userId = _skoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
+                User userId = skoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
                     .FirstOrDefault(m => m.Middlename == middlename);
 
-                IEnumerable<Course> courseses = _skoContext.Courses.Where(u => u.UserId == userId.Id);
+                IEnumerable<Course> courseses = skoContext.Courses.Where(u => u.UserId == userId.Id);
 
                 return courseses.ToList();
             }
@@ -184,15 +181,15 @@ namespace Bll.Concrete
         {
             try
             {
-                Course course = _skoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
+                Course course = skoContext.Courses.Where(u => u.UserId == userId).FirstOrDefault(c => c.Id == id);
 
                 if (course != null)
                 {
                     course.Evaluation = rating;
                     course.Evaluating = evaluating;
 
-                    _skoContext.Courses.AddOrUpdate(course);
-                    _skoContext.SaveChanges();
+                    skoContext.Courses.AddOrUpdate(course);
+                    skoContext.SaveChanges();
 
                     MessageBox.Show("Баллы успешно назначены!");
                 }
@@ -207,7 +204,7 @@ namespace Bll.Concrete
         {
             try
             {
-                return _skoContext.Courses.Where(x => x.UserId == userId).Sum(r => r.Evaluation).ToString();
+                return skoContext.Courses.Where(x => x.UserId == userId).Sum(r => r.Evaluation).ToString();
             }
             catch (Exception ex)
             {
@@ -220,10 +217,10 @@ namespace Bll.Concrete
         {
             try
             {
-                User userId = _skoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
+                User userId = skoContext.Users.Where(l => l.Lastname == lastname).Where(f => f.Firstname == firstname)
                     .FirstOrDefault(m => m.Middlename == middlename);
 
-                var summary = _skoContext.Courses.Where(u => u.UserId == userId.Id).GroupBy(c => c.Category).Select(c => new
+                var summary = skoContext.Courses.Where(u => u.UserId == userId.Id).GroupBy(c => c.Category).Select(c => new
                 {
                     category = c.Key,
                     evaluation = c.Sum(e => e.Evaluation)
@@ -259,7 +256,7 @@ namespace Bll.Concrete
                 {
                     for (int j = 0; j < dataGrid.Items.Count; j++)
                     {
-                        TextBlock b = dataGrid.Columns[i].GetCellContent(dataGrid.Items[j]) as TextBlock;
+                        var b = dataGrid.Columns[i].GetCellContent(dataGrid.Items[j]) as TextBlock;
                         Range myRange = (Range)sheet1.Cells[j + 2, i + 1];
 
                         if (b != null) myRange.Value2 = b.Text;
