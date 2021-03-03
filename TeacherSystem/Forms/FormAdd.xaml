@@ -43,7 +43,7 @@
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <Button Name="BtnClear" HorizontalAlignment="Left" Margin="236,425,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnClear_Click">
+        <Button Name="BtnClear" HorizontalAlignment="Left" Margin="236,421,0,0" Width="132" FontSize="18" Click="BtnClear_Click" Height="35" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
                 <Image Source="../Source/Clear_32px.png"  Height="29"/>
                 <TextBlock Text=" Очистить" Height="26"/>

@@ -77,39 +77,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="FormsAddEducations\FormAdd.xaml.cs">
+    <Compile Include="Forms\FormAdd.xaml.cs">
       <DependentUpon>FormAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormsAddEducations\FormChooseCategory.xaml.cs">
+    <Compile Include="Forms\FormChooseCategory.xaml.cs">
       <DependentUpon>FormChooseCategory.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormsAddEducations\FormEdit.xaml.cs">
+    <Compile Include="Forms\FormEdit.xaml.cs">
       <DependentUpon>FormEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormsAddEducations\FormInfo.xaml.cs">
+    <Compile Include="Forms\FormInfo.xaml.cs">
       <DependentUpon>FormInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormsAddEducations\FormOtherUsersCourses.xaml.cs">
+    <Compile Include="Forms\FormOtherUsersCourses.xaml.cs">
       <DependentUpon>FormOtherUsersCourses.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormsAddEducations\FormProfile.xaml.cs">
+    <Compile Include="Forms\FormProfile.xaml.cs">
       <DependentUpon>FormProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormsAddEducations\FormUsersOnline.xaml.cs">
+    <Compile Include="Forms\FormUsersOnline.xaml.cs">
       <DependentUpon>FormUsersOnline.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormsAddEducations\FormViewItemsFull.xaml.cs">
+    <Compile Include="Forms\FormViewItemsFull.xaml.cs">
       <DependentUpon>FormViewItemsFull.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="FormsAddEducations\FormAdd.xaml">
+    <Page Include="Forms\FormAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FormsAddEducations\FormChooseCategory.xaml">
+    <Page Include="Forms\FormChooseCategory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,27 +117,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="FormsAddEducations\FormEdit.xaml">
+    <Page Include="Forms\FormEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FormsAddEducations\FormInfo.xaml">
+    <Page Include="Forms\FormInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FormsAddEducations\FormOtherUsersCourses.xaml">
+    <Page Include="Forms\FormOtherUsersCourses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FormsAddEducations\FormProfile.xaml">
+    <Page Include="Forms\FormProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FormsAddEducations\FormUsersOnline.xaml">
+    <Page Include="Forms\FormUsersOnline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FormsAddEducations\FormViewItemsFull.xaml">
+    <Page Include="Forms\FormViewItemsFull.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
