@@ -65,32 +65,6 @@ namespace BLL.Concrete
             dataGrid.Columns[1].Header = "Имя";
             dataGrid.Columns[2].Header = "Отчество";
             dataGrid.Columns[3].Header = "Общий балл";
-            dataGrid.Columns[4].Visibility = Visibility.Hidden;
-            dataGrid.Columns[5].Visibility = Visibility.Hidden;
-            dataGrid.Columns[6].Visibility = Visibility.Hidden;
-            dataGrid.Columns[7].Visibility = Visibility.Hidden;
-            dataGrid.Columns[8].Visibility = Visibility.Hidden;
-            dataGrid.Columns[9].Visibility = Visibility.Hidden;
-            dataGrid.Columns[10].Visibility = Visibility.Hidden;
-        }
-
-        public void SetConnectionString(string connectionString)
-        {
-            try
-            {
-
-                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                config.ConnectionStrings.ConnectionStrings.Remove("Soko");
-                config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("Soko", connectionString, "System.Data.SqlClient"));
-                config.Save(ConfigurationSaveMode.Modified);
-                config.Save();
-                ConfigurationManager.RefreshSection("connectionStrings");
-                config.Save();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Информация о программе" Height="323.969" Width="486.327" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="BtnClose" HorizontalAlignment="Left" Margin="320,242,0,0" VerticalAlignment="Top" Width="132" Height="35" FontSize="18" Click="BtnClose_Click">
+        <Button x:Name="BtnClose" Margin="320,242,0,0" FontSize="18" Click="BtnClose_Click" HorizontalAlignment="Left" Width="132" Height="35" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -18,7 +18,7 @@
         </Button>
         <Label Content="«Система управления качеством образования" HorizontalAlignment="Left" Margin="16,13,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="НЧОУ СОШ ФК Краснодар (СКО)®»" HorizontalAlignment="Left" Margin="75,44,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Версия: 2.3.1" HorizontalAlignment="Left" Margin="16,84,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Версия: 2.4" HorizontalAlignment="Left" Margin="16,84,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="Скорость соединения сети: не менее 5 Mbps" HorizontalAlignment="Left" Margin="16,121,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="Минимальное разрешение экрана: 1024х768" HorizontalAlignment="Left" Margin="16,161,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="Разработка: i.panfilov@fckrasnodar.ru" HorizontalAlignment="Left" Margin="16,200,0,0" VerticalAlignment="Top" FontSize="20"/>

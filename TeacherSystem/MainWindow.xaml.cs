@@ -87,7 +87,7 @@ namespace TeacherSystem
 
                 if (items == null)
                 {
-                        return;
+                    return;
                 }
 
                 Id = items.Id;
@@ -100,7 +100,7 @@ namespace TeacherSystem
                 FileName = items.FileName;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -187,6 +187,7 @@ namespace TeacherSystem
         {
             if (e.Cancel == false)
             {
+                UserIsOnline = new UserRepository().UserIsOffline(Convert.ToInt32(TxbxUserId.Text));
                 Application.Current.Shutdown();
             }
         }

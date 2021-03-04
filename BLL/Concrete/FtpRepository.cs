@@ -147,7 +147,7 @@ namespace BLL.Concrete
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         //Метод протокола FTP MKD для создания каталога на FTP-сервере 
@@ -161,7 +161,7 @@ namespace BLL.Concrete
                 ftpRequest.EnableSsl = UseSsl;
                 ftpRequest.Method = WebRequestMethods.Ftp.MakeDirectory;
 
-                using (FtpWebResponse ftpResponse = (FtpWebResponse) ftpRequest.GetResponse())
+                using (FtpWebResponse ftpResponse = (FtpWebResponse)ftpRequest.GetResponse())
                 {
                     ftpResponse.Close();
                 }
@@ -191,7 +191,7 @@ namespace BLL.Concrete
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         //Просмотр файлов в директории
